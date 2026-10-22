@@ -29,14 +29,13 @@ First run needs internet once (dependency install). Fully offline after that.
 
 ## About the content pack
 
-The full content pack (`data/content_pack.json`, extracted from the course
-textbook, and `assets/book.pdf`) is **not committed to this repository** for
-copyright reasons. The repo ships with `data/sample_pack.json`, a demo pack so
-everything runs out of the box.
+This is a **private** repository for personal study. It ships the full content
+pack (`data/content_pack.json`, extracted from the course textbook: 14 chapters,
+131 practice questions, 14 definitions), so the app runs with the complete book
+everywhere — including the Streamlit Cloud deployment on your phone/tablet.
 
-To use your own textbook content locally: place your extracted
-`content_pack.json` in `data/` (replacing the sample) — the app detects it
-automatically on next launch. Nothing is uploaded anywhere.
+The sample pack (`data/sample_pack.json`) remains as a fallback. The source PDF
+(`assets/book.pdf`) is kept local-only and is never committed.
 
 ## Developer
 

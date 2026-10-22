@@ -5,6 +5,7 @@ install; DEMO is only a fallback.
 """
 
 import importlib.util
+import json
 from pathlib import Path
 
 import pytest
@@ -50,12 +51,18 @@ def test_no_pack_at_all(monkeypatch, tmp_path):
 
 
 def test_repo_real_pack_selected():
-    """Guard: the copyrighted textbook pack (data/content_pack.json) must
-    NOT be committed — see README. Skipped in local dev copies where the
-    pack legitimately exists on disk."""
+    """The full textbook pack (data/content_pack.json) must be committed.
+
+    This repository is private (personal study use), so it ships the real
+    extracted textbook content instead of the synthetic demo pack. The app
+    prefers content_pack.json automatically when present.
+    """
     repo_root = Path(__file__).resolve().parent.parent
-    if (repo_root / "data" / "content_pack.json").exists():
-        pytest.skip("local dev copy ships the textbook pack; not committed to git")
+    pack = repo_root / "data" / "content_pack.json"
+    assert pack.is_file(), "content_pack.json must be committed to this private repo"
+    doc = json.loads(pack.read_text(encoding="utf-8"))
+    assert doc.get("pack_format") == 1, "unexpected pack format"
+    assert len(doc.get("chapters", [])) == 14, "pack should hold all 14 chapters"
     assert (repo_root / "data" / "sample_pack.json").exists(), (
         "sample_pack.json must ship as the fallback"
     )
