@@ -1,0 +1,18 @@
+[13:21:53] opened PDF: 287 pages
+[13:23:16]   ... 20/287 pages (83s)
+[13:27:04]   ... 40/287 pages (312s)
+[13:29:08]   ... 60/287 pages (435s)
+[13:31:18]   ... 80/287 pages (565s)
+[13:33:44]   ... 100/287 pages (712s)
+[13:36:02]   ... 120/287 pages (849s)
+[13:38:14]   ... 140/287 pages (981s)
+[13:40:20]   ... 160/287 pages (1108s)
+[13:41:49]   ... 180/287 pages (1196s)
+[13:43:45]   ... 200/287 pages (1312s)
+[13:45:59]   ... 220/287 pages (1446s)
+[13:47:46]   ... 240/287 pages (1554s)
+[13:49:20]   ... 260/287 pages (1647s)
+[13:51:02]   ... 280/287 pages (1749s)
+[13:51:44] extraction done in 1791s
+[13:51:44] WROTE /home/hatch/workspace/capt-tax/data/content_pack.json: 14 chapters, 287 pages, 131 questions, 14 definition candidates
+[13:51:44] size: 855 KB

@@ -1,0 +1,13 @@
+# CAPT Taxation Exam Preparation System — dependencies
+# Python 3.10+ required. Install: pip install -r requirements.txt
+# NOTE: rapidocr_onnxruntime is intentionally NOT required here; the importer
+# team treats it as an optional dependency for the in-app OCR importer.
+
+streamlit==1.66.0
+# NOTE: pinned to the 1.28.x line on purpose. pymupdf 2.x pulls heavy,
+# unrelated extras (onnxruntime, networkx, pyyaml, ...) that have no wheels
+# for some Windows Python versions and break first-time installs.
+# 1.28.x has zero dependencies and covers everything the app uses
+# (text extraction, page rendering).
+pymupdf==1.28.2
+python-docx==1.2.0
